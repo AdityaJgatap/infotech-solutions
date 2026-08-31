@@ -1,0 +1,153 @@
+.body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; /* आधुनिक लुकसाठी */
+    background-image: url(background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+/* --- २. काळा पारदर्शक ओव्हरले (हा बॅकग्राउंड इमेजच्या वर राहील) --- */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.55); /* पडदा थोडा हलका केला आहे जेणेकरून डल दिसणार नाही */
+    z-index: 1; /* हा पहिल्या लेयरवर राहील */
+}
+
+/* --- ३. मुख्य कंटेनर बॉक्स (सर्व कंटेंट्स ओव्हरलेच्या वर आणण्यासाठी) --- */
+.div {
+    position: relative; /* अत्यंत आवश्यक */
+    z-index: 2;         /* यामुळे सर्व बटन्स आणि टेक्स्ट काळ्या पडद्याच्या वर येऊन चमकदार दिसतील आणि क्लिक होतील */
+    text-align: center;
+    width: 90%;
+    max-width: 950px;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+/* --- ४. मुख्य हेडिंग (एकदम कडक पांढरे) --- */
+#h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    text-shadow: 3px 3px 8px #0a0a0ade;
+    color: white !important; /* कडक पांढरा रंग */
+    margin-bottom: 30px;
+}
+
+/* --- ५. नेव्हिगेशन लिस्ट (Flexbox मांडणी) --- */
+.ul1 {
+    list-style-type: none; 
+    padding: 0;
+    margin: 25px auto;
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* बटन्समधील अचूक अंतर */
+    flex-wrap: wrap; /* स्क्रीन लहान झाल्यावर बटन्स तुटणार नाहीत */
+}
+
+/* --- ६. नवीन स्टायलिश ग्लास-लुक बटन्स (जुना निळा रंग बदलला) --- */
+.ul1 li {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.15); /* आधुनिक पारदर्शक पांढरा रंग */
+    border: 1px solid rgba(255, 255, 255, 0.25); /* फिकट बॉर्डर */
+    border-radius: 30px; /* गोलाकार कोपरे (Modern Looks) */
+    padding: 12px 24px;
+    margin: 0;
+    transition: all 0.3s ease; /* स्मूथ ॲनिमेशन */
+}
+
+/* --- ७. बटनमधील लिंक्स आणि आयकॉन्स --- */
+.anchor {
+    text-decoration: none;
+    color: rgb(249, 247, 247) !important;
+    font-size: 1rem;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px; /* आयकॉन आणि अक्षरामधील अंतर */
+    padding: 0 !important; /* जुनी ५५ पिक्सेलची चूक काढून टाकली जिससे टेक्स्ट सेंटरमध्ये येईल */
+}
+
+/* --- ८. बटनवर माउस नेल्यावर होणारा मॅजिक बदल (Hover Effect) --- */
+.ul1 li:hover {
+    background-color: rgb(140, 188, 205);
+    border-color: rgb(117, 153, 232);
+    transform: translateY(-3px); /* बटन हलके वर उचलले जाईल */
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+  
+    
+}
+
+/* Hover झाल्यावर अक्षरांचा रंग कडक निळा करणे */
+.ul1 li:hover .anchor {
+    color: #0e1d43 !important;
+    
+}
+
+/* सपोर्टिंग क्लीनअप */
+.ul1 li a {
+    text-align: center;
+    padding: 0;
+}
+
+/* --- ९. इतर सर्व अंतर्गत पेजेसचे फिक्स बॅकग्राउंड्स --- */
+.cont {
+    background-image: url(cuntact-us.jpg);
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    background-position: center;
+}
+
+.service {
+    background-image: url(service.jpg);
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    background-position: center;
+}
+
+.team {
+    background-image: url(team.jpeg);
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    background-position: center;
+}
+
+.about {
+    background-image: url(about.jpeg);
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    background-position: center;
+}
+
+/* --- १०. इतर सपोर्टिंग स्टाईल्स --- */
+#h11 {
+    text-shadow: 2px 2px 4px #f66b6bde;
+    text-align: center;
+    color: rgb(134, 40, 40);
+}
+
+.container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+}
+
+.nav {
+    background-color: grey;
+}
